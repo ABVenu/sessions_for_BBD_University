@@ -1,4 +1,4 @@
-
+![Compass](https://coding-platform.s3.amazonaws.com/dev/lms/tickets/ae2d37aa-c894-4c44-a4e5-d405bd886c22/tEcQtwFgCDxO2XlX.webp)
 ## **A. MongoDB Compass — Complete Feature Walkthrough**
 
 MongoDB Compass is the **official GUI tool** for MongoDB.
