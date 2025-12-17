@@ -63,7 +63,31 @@ db.createCollection("users", {
   }
 })
 ```
-
+**or**
+### Paste the following directly into the Validation Tab in Compass
+```bash
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["name", "email"],
+    "properties": {
+      "name": {
+        "bsonType": "string",
+        "description": "Name must be a string and is required"
+      },
+      "email": {
+        "bsonType": "string",
+        "description": "Email must be a string and is required"
+      },
+      "age": {
+        "bsonType": "int",
+        "minimum": 18,
+        "description": "Age must be an integer >= 18"
+      }
+    }
+  }
+}
+```
 ---
 
 ## **Validation Modes**
