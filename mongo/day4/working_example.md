@@ -412,17 +412,16 @@ db.students.aggregate([
 db.students.aggregate([
   {
     $project: {
-      studentId: 1,
       name: 1,
-      totalCourses: { $size: "$courses" }
+      state: 1,
+      courseCount: {
+        $size: { $ifNull: ["$courses", []] }
+      }
     }
   },
   {
     $merge: {
-      into: "student_summary",
-      on: "studentId",
-      whenMatched: "merge",
-      whenNotMatched: "insert"
+      into: "students_enriched"
     }
   }
 ])
